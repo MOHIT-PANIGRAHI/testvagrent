@@ -6,4 +6,12 @@ keys = my_dictionary.keys()
 result = [seq for i in range(len(values), 0, -1)
               for seq in itertools.combinations(keys, 2)
               if sum(map(my_dictionary.get,seq)) <=n]
-print(result)
+def unique(list1):
+    unique_list = []
+    for x in list1:
+        if x not in unique_list:
+            unique_list.append(x)
+    # print list
+    for x in unique_list:
+        print(x)
+unique(result)
